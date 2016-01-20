@@ -1,0 +1,98 @@
+﻿<#@ template inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation" #>
+<#@ output extension=".xml" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="System.Text.RegularExpressions" #>
+<#@ import namespace="System.Security" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.Security.Cryptography" #>
+<#@ import namespace="System.Xml" #>
+<#@ import namespace="System.Xml.XPath" #>
+<#@ assembly name="System.Xml" #>
+<#@ Tml processor="TmlDirectiveProcessor" requires="fileName='@@MODELFILE@@'" #>
+<#    
+    string ProjectRoot = @"@@PROJECTROOT@@";
+    string GeneratedApp = @"\GeneratedApplication\recordme";
+    string FullScript = @"\recordme-full.xml";    
+    string RecordmeRoot = @"<recordme/>";    
+
+    XmlDocument fullxml = new XmlDocument();
+    if (File.Exists(ProjectRoot + GeneratedApp + FullScript))
+    {
+		fullxml.Load(ProjectRoot + GeneratedApp + FullScript);
+	}
+	else
+	{
+		fullxml.LoadXml(RecordmeRoot);
+	}
+	XmlDocument modulexml = new XmlDocument();
+	modulexml.LoadXml(RecordmeRoot);
+
+    foreach (State state in this.VoiceApplicationModel.States) 
+    {
+		if (state is Audio) 
+		{
+			Audio audio = state as Audio;
+			foreach (AudioFile audiofile in audio.AudioFiles) 
+			{
+				if (0 == audiofile.URL.Length)
+				{	
+					List<PromptPiece> pieces = AppGenGetPromptPieces(audiofile);
+					foreach (PromptPiece p in pieces)
+					{
+						AppGenAddPromptElement(modulexml, p);
+						AppGenAddPromptElement(fullxml, p);
+					}
+				}
+			}
+		} 
+	}
+	AppGenWriteXMLFile(fullxml, ProjectRoot + GeneratedApp + FullScript, "");
+	AppGenWriteXMLConsole(modulexml);
+	
+#>
+<#@ include file="..\common.tt" #>
+<#+
+void AppGenWriteXMLConsole(XmlDocument doc)
+{	    
+    StringBuilder sb = new StringBuilder();    
+    XmlWriterSettings settings = new XmlWriterSettings();
+    settings.Indent = true;
+    settings.IndentChars = ("    ");
+    settings.Encoding = Encoding.UTF8;
+    settings.OmitXmlDeclaration = true; // The encoding attribute gets set to UTF-16, so we will output our own header
+	XmlWriter xmlWriter = XmlWriter.Create(sb, settings);       
+	doc.Save(xmlWriter);    	
+	WriteLine("<?xml version=\"1.0\"?>");    
+	WriteLine(sb.ToString());    
+	xmlWriter.Close();  
+}
+
+void AppGenAddPromptElement(XmlDocument doc, PromptPiece prompt)
+{    
+	string name = prompt.Name + ".wav";
+    string match = String.Format("/recordme/prompt[@name='{0}']", name);
+    XmlElement elm = doc.SelectSingleNode(match) as XmlElement;
+    if (elm == null)
+    {
+		string type = "static";
+		if (prompt.Type.Equals(PromptPiece.PromptEnum.kCoart))
+		{
+			type = "coart";
+		}
+		else if (prompt.Type.Equals(PromptPiece.PromptEnum.kVariable))
+		{
+			type = "variable";
+		}				
+		elm = doc.CreateElement("prompt");
+        elm.SetAttribute("name", name);
+        elm.SetAttribute("type", type);
+        XmlElement content = doc.CreateElement("content");
+        content.InnerText= SecurityElement.Escape(prompt.TTS.Trim());
+        elm.AppendChild(content);
+        XmlNode root = doc.DocumentElement;
+		root.AppendChild(elm);
+    }
+}
+
+#>

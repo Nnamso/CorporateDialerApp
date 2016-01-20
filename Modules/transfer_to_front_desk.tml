@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<voiceApplicationModel dslVersion="1.0.0.0" Id="c5aac1ba-d439-46df-ba34-881cd9444db5" xmlns="https://studio.tellme.com/schemas/tml">
+  <states>
+    <start Id="7cf70f6d-8b96-4dc0-8d70-c40729e4f587" name="Start1">
+      <target>
+        <transition createCodeStub="false">
+          <presentationMoniker Id="7a1cc7d7-7cda-46fa-92ec-c519155aeeea" />
+        </transition>
+      </target>
+    </start>
+    <presentation Id="7a1cc7d7-7cda-46fa-92ec-c519155aeeea" name="Front Desk">
+      <target>
+        <transition createCodeStub="false">
+          <transferMoniker Id="0563e037-8a1f-41c3-9581-bc07d7ba9bac" />
+        </transition>
+      </target>
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="Please wait while you are transferred to the front desk." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;Please wait while you are transferred to the front desk.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;Please wait while you are transferred to the front desk.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;please wait while you are transferred to the front desk.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;abbca78dbf412e1b3539e9a74f31d38a&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;abbca78dbf412e1b3539e9a74f31d38a.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="0" mark="false" />
+          </audio>
+        </audioPresentation>
+      </presentationBases>
+    </presentation>
+    <transfer Id="0563e037-8a1f-41c3-9581-bc07d7ba9bac" name="Transfer" destination="tel:+16505550100" type="Blind" dTMFTermination="**" voiceTermination="">
+      <errorHandler>
+        <errorHandler Id="9f070b39-9e6d-4de2-956b-555ff98bf08a" name="Default Error Handler" />
+      </errorHandler>
+    </transfer>
+  </states>
+</voiceApplicationModel>

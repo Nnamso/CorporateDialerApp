@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<voiceApplicationModel dslVersion="1.0.0.0" Id="5a774852-ffc7-445a-8593-3de2b6d8b14d" xmlns="https://studio.tellme.com/schemas/tml">
+  <states>
+    <start Id="53b5f960-9977-41f0-8e4f-a1091ad1a14c" name="Start1">
+      <target>
+        <transition createCodeStub="false">
+          <userInputMoniker Id="e9c61743-1b3f-400b-8fab-3c95770802bb" />
+        </transition>
+      </target>
+    </start>
+    <userInput Id="e9c61743-1b3f-400b-8fab-3c95770802bb" name="Get Name" type="Menu" gobackStopsHere="True">
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="Who would you like to speak with?" xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;Who would you like to speak with?&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;Who would you like to speak with?&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;who would you like to speak with!&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;1c3efdf17ab21629b2115d0034e711d9&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;1c3efdf17ab21629b2115d0034e711d9.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="1" mark="false" />
+            <audio content="I am sorry I didn't hear that. Please say the full name of the person you would like to call." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I am sorry I didn't hear that. Please say the full name of the person you would like to call.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I am sorry I didn't hear that. Please say the full name of the person you would like to call.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i am sorry i didn't hear that. please say the full name of the person you would like to call.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;2d07eb7f3ae7a9405983689a8979af28&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;2d07eb7f3ae7a9405983689a8979af28.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoInput" count="1" mark="false" />
+            <audio content="I am sorry I still didn't hear that." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I am sorry I still didn't hear that.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I am sorry I still didn't hear that.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i am sorry i still didn't hear that.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;0eeaf2f79aabdbfa368a7d03a842461b&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;0eeaf2f79aabdbfa368a7d03a842461b.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoInput" count="2" mark="false" />
+            <audio content="I don't recognize that name. Please say the full name of the person you would like to call." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I don't recognize that name. Please say the full name of the person you would like to call.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I don't recognize that name. Please say the full name of the person you would like to call.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i don't recognize that name. please say the full name of the person you would like to call.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;4f88fd095de86b1e576ff67fed9d3fb0&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;4f88fd095de86b1e576ff67fed9d3fb0.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoMatch" count="1" mark="false" />
+            <audio content="I am sorry I don't recognize that name either." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I am sorry I don't recognize that name either.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I am sorry I don't recognize that name either.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i am sorry i don't recognize that name either.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;ad34f88d7da1c80d7355e40fafa35941&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;ad34f88d7da1c80d7355e40fafa35941.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoMatch" count="2" mark="false" />
+          </audio>
+          <grammars>
+            <grammar type="JSExpression" input="appsNamesGrammarURL + '?type=fullname'" mode="Voice" />
+          </grammars>
+        </audioPresentation>
+      </presentationBases>
+      <targets>
+        <recoTransition createCodeStub="false">
+          <fetchMoniker Id="eab693b0-9404-471c-85e2-2e7af91490a2" />
+        </recoTransition>
+      </targets>
+      <errorHandler>
+        <errorHandler Id="30ce640a-31b9-4ce4-a96a-a7fc96be683a" name="Transfer to front desk" />
+      </errorHandler>
+    </userInput>
+    <fetch Id="eab693b0-9404-471c-85e2-2e7af91490a2" name="Get User Info" method="get" uRL="js:appsLookupUserAPI" encodingType="urlencoded" nameList="username=appsFilled_get_name" gobackPassThru="false">
+      <targets>
+        <dataTransition createCodeStub="false" default="false">
+          <userInputMoniker Id="bd4ae621-71cc-456d-a528-f3188b0e5051" />
+        </dataTransition>
+      </targets>
+      <errorHandler>
+        <errorHandler Id="ac4727cc-caed-47be-805a-1ed3a4ae2e0a" name="Transfer to front desk" />
+      </errorHandler>
+    </fetch>
+    <transfer Id="3176d569-f926-4996-83ee-940e195f2a48" name="Transfer" notes="External callers are only transfered to work numbers" destination="js:'tel:' + appoAPI_get_user_info.users[0].user[0].work[0].text___" type="Bridge" dTMFTermination="**" voiceTermination="">
+      <target>
+        <transition createCodeStub="false">
+          <userInputMoniker Id="e9c61743-1b3f-400b-8fab-3c95770802bb" />
+        </transition>
+      </target>
+      <errorHandler>
+        <errorHandler Id="6a7244c5-a2bf-426d-8c24-cf3698cd3a4f" name="Default Error Handler" />
+      </errorHandler>
+    </transfer>
+    <userInput Id="bd4ae621-71cc-456d-a528-f3188b0e5051" name="Calling" type="Menu" gobackStopsHere="True" properties="timeout=0.0;bargintype=hotword">
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="Calling [John Smith] [transfer instruction and delay]" xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;Calling [John Smith] [transfer instruction and delay]&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;Calling&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;calling&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;606e357bd1c5bfb1dd6ee510aaaca822&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;606e357bd1c5bfb1dd6ee510aaaca822.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kVariable&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;1&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;[John Smith]&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;john smith&lt;/TTS&gt;&#xD;&#xA;      &lt;BulkAudioFilename&gt;john smith.txt&lt;/BulkAudioFilename&gt;&#xD;&#xA;      &lt;Name&gt;a42abdf28fe6156c10f86708e9f6808f&lt;/Name&gt;&#xD;&#xA;      &lt;Library&gt;Custom&lt;/Library&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;1&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;true&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;a42abdf28fe6156c10f86708e9f6808f.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kVariable&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;2&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;[transfer instruction and delay]&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;transfer instruction and delay&lt;/TTS&gt;&#xD;&#xA;      &lt;BulkAudioFilename&gt;transfer instruction and delay.txt&lt;/BulkAudioFilename&gt;&#xD;&#xA;      &lt;Name&gt;712a90e6d4bb753ec4670cb344f18d0e&lt;/Name&gt;&#xD;&#xA;      &lt;Library&gt;Custom&lt;/Library&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;712a90e6d4bb753ec4670cb344f18d0e.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="1" mark="false" />
+          </audio>
+          <grammars>
+            <grammar type="URL" input="../grxml/internal_caller/stop-transfer-il.grxml" mode="Voice" />
+          </grammars>
+        </audioPresentation>
+      </presentationBases>
+      <targets>
+        <recoTransition createCodeStub="false" grammarResult="stop">
+          <userInputMoniker Id="e9c61743-1b3f-400b-8fab-3c95770802bb" />
+        </recoTransition>
+      </targets>
+      <errorHandler>
+        <errorHandler Id="715d2ec7-17bd-410a-a3a2-cc493141e4e2">
+          <target>
+            <transition createCodeStub="false">
+              <transferMoniker Id="3176d569-f926-4996-83ee-940e195f2a48" />
+            </transition>
+          </target>
+        </errorHandler>
+      </errorHandler>
+    </userInput>
+  </states>
+</voiceApplicationModel>

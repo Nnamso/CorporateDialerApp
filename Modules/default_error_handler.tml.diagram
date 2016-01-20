@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmlLanguageDiagram dslVersion="1.0.0.0" isExpanded="true" absoluteBounds="0, 0, 11, 8.5" isCompleteView="true" name="default_error_handler">
+  <voiceApplicationModelMoniker Id="71d43c30-a70c-4295-b3ff-0e8d69b769ff" />
+  <nestedChildShapes>
+    <startShape Id="efd4ec52-d0ef-4053-860e-c9cd990b3484" isExpanded="true" absoluteBounds="4.625, 0.5, 0.25, 0.25">
+      <startMoniker Id="c6f1732f-b2af-4095-8aa4-acb73e835afb" />
+    </startShape>
+    <presentationShape Id="4f746ccf-c0cd-4426-add8-7551b2ff2da4" isExpanded="true" absoluteBounds="4.125, 1.25, 1.25, 0.5">
+      <presentationMoniker Id="55492b49-c299-40b6-a90d-b74e9dfaf021" />
+    </presentationShape>
+    <exitShape Id="e4ea3db2-007e-40a8-a043-fe99b6bfd8d0" isExpanded="true" absoluteBounds="4.625, 2.125, 0.25, 0.25">
+      <exitMoniker Id="33053ab6-d3de-4109-bc0b-93cfdf3179b3" />
+    </exitShape>
+    <transitionConnector edgePoints="[(4.75 : 0.75); (4.75 : 1.25)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <startShapeMoniker Id="efd4ec52-d0ef-4053-860e-c9cd990b3484" />
+        <presentationShapeMoniker Id="4f746ccf-c0cd-4426-add8-7551b2ff2da4" />
+      </nodes>
+    </transitionConnector>
+    <transitionConnector edgePoints="[(4.75 : 1.75); (4.75 : 2.125)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <presentationShapeMoniker Id="4f746ccf-c0cd-4426-add8-7551b2ff2da4" />
+        <exitShapeMoniker Id="e4ea3db2-007e-40a8-a043-fe99b6bfd8d0" />
+      </nodes>
+    </transitionConnector>
+  </nestedChildShapes>
+</tmlLanguageDiagram>

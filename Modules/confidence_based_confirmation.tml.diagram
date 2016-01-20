@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmlLanguageDiagram dslVersion="1.0.0.0" isExpanded="true" absoluteBounds="0, 0, 11, 8.5" isCompleteView="true" name="confidence_based_confirmation">
+  <voiceApplicationModelMoniker Id="d7f49df6-6400-4f20-ad6c-0b8277484749" />
+  <nestedChildShapes>
+    <startShape Id="03e1a3e4-277a-49f7-a78b-6f6c32d644da" isExpanded="true" absoluteBounds="4.875, 0.625, 0.25, 0.25">
+      <startMoniker Id="33ace892-8982-4646-aacf-7957445265b6" />
+    </startShape>
+    <exitShape Id="91ebec49-04d9-4f44-a6db-0eb0a55bfbbc" isExpanded="true" absoluteBounds="3.125, 2.375, 0.25, 0.25">
+      <exitMoniker Id="d4253459-9b6c-48c9-b744-c4f73e8051d8" />
+    </exitShape>
+    <exitShape Id="018f57f0-73f0-45aa-9da4-b5039c3aeaa3" isExpanded="true" absoluteBounds="4.875, 5.75, 0.25, 0.25">
+      <exitMoniker Id="cf5a3b6a-1868-4faf-a4ea-39772da60380" />
+    </exitShape>
+    <dataDecisionShape Id="c895f0ce-f9a0-4ff0-b358-acee38f15b83" isExpanded="true" absoluteBounds="4.375, 1.375, 1.25, 0.5">
+      <decisionMoniker Id="3dfc243b-d03b-4c13-b5f6-10d297fbb177" />
+    </dataDecisionShape>
+    <multiPathTransitionConnector edgePoints="[(4.375 : 1.625); (3.25 : 1.625); (3.25 : 2.375)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataDecisionShapeMoniker Id="c895f0ce-f9a0-4ff0-b358-acee38f15b83" />
+        <exitShapeMoniker Id="91ebec49-04d9-4f44-a6db-0eb0a55bfbbc" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <transitionConnector edgePoints="[(5 : 0.875); (5 : 1.375)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <startShapeMoniker Id="03e1a3e4-277a-49f7-a78b-6f6c32d644da" />
+        <dataDecisionShapeMoniker Id="c895f0ce-f9a0-4ff0-b358-acee38f15b83" />
+      </nodes>
+    </transitionConnector>
+    <dataDecisionShape Id="fced86c0-1117-434d-ba7c-69f52188f160" isExpanded="true" absoluteBounds="4.375, 2.25, 1.25, 0.5">
+      <decisionMoniker Id="8312d80d-697d-4fe5-a6d6-44e992533349" />
+    </dataDecisionShape>
+    <multiPathTransitionConnector edgePoints="[(4.375 : 2.5); (3.375 : 2.5)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataDecisionShapeMoniker Id="fced86c0-1117-434d-ba7c-69f52188f160" />
+        <exitShapeMoniker Id="91ebec49-04d9-4f44-a6db-0eb0a55bfbbc" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <multiPathTransitionConnector edgePoints="[(5 : 1.875); (5 : 2.25)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataDecisionShapeMoniker Id="c895f0ce-f9a0-4ff0-b358-acee38f15b83" />
+        <dataDecisionShapeMoniker Id="fced86c0-1117-434d-ba7c-69f52188f160" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <userInputShape Id="c6166398-e46d-426e-8ca8-8d33535aba99" isExpanded="true" absoluteBounds="4.375, 3.125, 1.25, 0.5">
+      <userInputMoniker Id="8c0a8754-2227-4fc2-afd1-1946b3fb0787" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="aeb16c77-63af-4904-84c0-b5163973a833" isExpanded="true" absoluteBounds="4.53125, 3.585, 0.08, 0.08">
+          <errorHandlerMoniker Id="85ae5e3b-9c99-41c3-98a9-8dbc883bab3e" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </userInputShape>
+    <multiPathTransitionConnector edgePoints="[(5 : 2.75); (5 : 3.125)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataDecisionShapeMoniker Id="fced86c0-1117-434d-ba7c-69f52188f160" />
+        <userInputShapeMoniker Id="c6166398-e46d-426e-8ca8-8d33535aba99" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <dataDecisionShape Id="be937d4c-c1fa-4126-9f65-b58249b83b30" isExpanded="true" absoluteBounds="4.375, 4, 1.25, 0.5">
+      <decisionMoniker Id="6898f752-c6cb-4f1d-99f6-bd735eb71b26" />
+    </dataDecisionShape>
+    <transferShape Id="aebc0073-2b3d-49e5-9081-882e1aa2ce1c" isExpanded="true" absoluteBounds="6.375, 4, 1.25, 0.5">
+      <transferMoniker Id="3a27a2db-e58a-4929-8541-94bb73e5dea1" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="c9768db0-c5a1-4860-8db8-0fd7a62021ec" isExpanded="true" absoluteBounds="6.53125, 4.46, 0.08, 0.08">
+          <errorHandlerMoniker Id="8ab5fa53-7585-4e2b-977b-ed842fa5167b" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </transferShape>
+    <multiPathTransitionConnector edgePoints="[(5.625 : 4.25); (6.375 : 4.25)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataDecisionShapeMoniker Id="be937d4c-c1fa-4126-9f65-b58249b83b30" />
+        <transferShapeMoniker Id="aebc0073-2b3d-49e5-9081-882e1aa2ce1c" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <presentationShape Id="deef8f3f-4f25-4d79-88a5-0db12e507ac0" isExpanded="true" absoluteBounds="4.375, 4.875, 1.25, 0.5">
+      <presentationMoniker Id="d538eca6-c358-4952-8010-2844ad642e44" />
+    </presentationShape>
+    <multiPathTransitionConnector edgePoints="[(5 : 4.5); (5 : 4.875)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataDecisionShapeMoniker Id="be937d4c-c1fa-4126-9f65-b58249b83b30" />
+        <presentationShapeMoniker Id="deef8f3f-4f25-4d79-88a5-0db12e507ac0" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <transitionConnector edgePoints="[(5 : 5.375); (5 : 5.75)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <presentationShapeMoniker Id="deef8f3f-4f25-4d79-88a5-0db12e507ac0" />
+        <exitShapeMoniker Id="018f57f0-73f0-45aa-9da4-b5039c3aeaa3" />
+      </nodes>
+    </transitionConnector>
+    <multiPathTransitionConnector edgePoints="[(4.375 : 3.375); (3.25 : 3.375); (3.25 : 2.625)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="caadb81d-5cfc-42bd-9c35-345bd1c658c5" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <userInputShapeMoniker Id="c6166398-e46d-426e-8ca8-8d33535aba99" />
+        <exitShapeMoniker Id="91ebec49-04d9-4f44-a6db-0eb0a55bfbbc" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <multiPathTransitionConnector edgePoints="[(5.02083333333333 : 3.625); (5.02083333333333 : 4)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="caadb81d-5cfc-42bd-9c35-345bd1c658c5" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <userInputShapeMoniker Id="c6166398-e46d-426e-8ca8-8d33535aba99" />
+        <dataDecisionShapeMoniker Id="be937d4c-c1fa-4126-9f65-b58249b83b30" />
+      </nodes>
+    </multiPathTransitionConnector>
+  </nestedChildShapes>
+</tmlLanguageDiagram>

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<vxml version="2.1">
+    <!--*************************************************************
+ Application Level JavaScript Support
+*************************************************************-->
+    <script src="../../js/app-root.js" />
+    <!--*************************************************************
+ Global Properties
+*************************************************************-->
+    <property name="timeout" value="5.0s" />
+    <property name="sensitivity" value="0.50" />
+    <property name="confidencelevel" value="0.50" />
+    <!--  For DTMF Buffering   -->
+    <property name="termtimeout" value="1s" />
+    <property name="interdigittimeout" value="3000" />
+    <!--*************************************************************
+ Variables
+*************************************************************-->
+    <!-- Full Path to the root audio -->
+    <var name="appsAudioRootPath" expr="'http://test.com/corporate_dialers/'" />
+    <var name="appsEmployeeNamesAudio" expr="'http://test.com/employee_names/'" />
+    <var name="appsBaseAPI" expr="'http://test.com/'" />
+    <var name="appsLookupUserAPI" expr="appsBaseAPI + 'lookupuser.pl'" />
+    <var name="appsNamesGrammarURL" expr="appsBaseAPI + 'namegrammars.pl'" />
+    <var name="appsPhoneSelectionGrammarURL" expr="appsBaseAPI + 'phoneselection.pl'" />
+    <var name="appoUser" expr="undefined" />
+    <var name="appsTransferDestination" expr="undefined" />
+    <var name="appsPhoneGrammar" expr="undefined" />
+    <!--*************************************************************
+ Generated Variables/Handlers
+ DON'T ADD OR MODIFY ANY ELEMENTS IN THIS SECTION IT WILL BE
+ DELETED AND REBUILT ON FULL APPLICATION GENERATION
+*************************************************************-->
+    <!-- begin generated -->
+    <var name="appsFilled_select_phone" expr="undefined" />
+    <var name="appsFilled_select_user" expr="undefined" />
+    <var name="appoAPI_get_first_name_list" expr="undefined" />
+    <var name="appoCBCCandidate" expr="undefined" />
+    <var name="appoSkipList" expr="new SkipList()" />
+    <var name="appaReturn_confidence_based_confirmation" expr="new Array()" />
+    <var name="appoAPI_lookup_ani" expr="undefined" />
+    <var name="appsFilled_calling" expr="undefined" />
+    <var name="appoBridgeTransfer" expr="undefined" />
+    <var name="appoAPI_get_user_info" expr="undefined" />
+    <var name="appsFilled_get_name" expr="undefined" />
+    <var name="appsFilled_i_heard_you_say" expr="undefined" />
+    <var name="appaGoback" expr="new Array()" />
+    <var name="appsReprompt" expr="undefined" />
+    <link event="help">
+        <grammar version="1.0" weight="0.1" xml:lang="en-US" root="help" mode="voice" tag-format="semantics/1.0">
+            <rule id="help" scope="public">
+                <one-of>
+                    <item weight="0.99">
+                        <ruleref special="VOID" />
+                    </item>
+                    <item weight="0.01">help<tag>out = "help"</tag></item>
+                </one-of>
+            </rule>
+        </grammar>
+    </link>
+    <catch event="help">
+        <audio>Sorry, help is not available from this menu</audio>
+        <reprompt />
+    </catch>
+    <link event="goback">
+        <grammar version="1.0" weight="0.1" xml:lang="en-US" root="goback" mode="voice" tag-format="semantics/1.0">
+            <rule id="goback" scope="public">
+                <one-of>
+                    <item weight="0.9">
+                        <ruleref special="VOID" />
+                    </item>
+                    <item weight="0.1">go back<tag>out = "goback"</tag></item>
+                </one-of>
+            </rule>
+        </grammar>
+    </link>
+    <!-- Catch Goback: Attempt to find a state to go back to.  If a target state is not
+    found the list end audio will be played and the user will be reprompted for the current
+    state -->
+    <catch event="goback">
+        <var name="sGobackState" expr="GetGobackTarget()" />
+        <if cond="sGobackState == ''">
+            <audio src="http://naturalsound.svc.tellme.com/common-audio/listend-se.wav" />
+            <reprompt />
+            <else />
+            <audio src="http://naturalsound.svc.tellme.com/common-audio/goback-se.wav" />
+            <goto expr="sGobackState" />
+        </if>
+    </catch>
+    <!-- end generated -->
+</vxml>

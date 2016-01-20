@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<voiceApplicationModel dslVersion="1.0.0.0" Id="71d43c30-a70c-4295-b3ff-0e8d69b769ff" xmlns="https://studio.tellme.com/schemas/tml">
+  <states>
+    <start Id="c6f1732f-b2af-4095-8aa4-acb73e835afb" name="Start1">
+      <target>
+        <transition createCodeStub="false">
+          <presentationMoniker Id="55492b49-c299-40b6-a90d-b74e9dfaf021" />
+        </transition>
+      </target>
+    </start>
+    <presentation Id="55492b49-c299-40b6-a90d-b74e9dfaf021" name="Error">
+      <target>
+        <transition createCodeStub="false">
+          <exitMoniker Id="33053ab6-d3de-4109-bc0b-93cfdf3179b3" />
+        </transition>
+      </target>
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="Thank you for calling, goodbye." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;Thank you for calling, goodbye.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;Thank you for calling, goodbye.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;thank you for calling, goodbye.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;06f9f5d3429c472313d8bf29ec1ff8d5&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;06f9f5d3429c472313d8bf29ec1ff8d5.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="0" />
+          </audio>
+        </audioPresentation>
+      </presentationBases>
+    </presentation>
+    <exit Id="33053ab6-d3de-4109-bc0b-93cfdf3179b3" name="Exit1" type="Disconnect" />
+  </states>
+</voiceApplicationModel>

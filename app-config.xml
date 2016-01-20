@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<app-config>
+  <title>Corporate Dialer</title>
+  <description>Tellme Corporate Dialer</description>
+  <author>Trink</author>
+  <company>Tellme Networks Inc</company>
+  
+  <!-- global event handlers -->
+  <goback>enabled</goback>  
+</app-config>
+

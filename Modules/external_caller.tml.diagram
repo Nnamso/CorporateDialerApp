@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmlLanguageDiagram dslVersion="1.0.0.0" isExpanded="true" absoluteBounds="0, 0, 11, 8.5" isCompleteView="true" name="external_caller">
+  <voiceApplicationModelMoniker Id="5a774852-ffc7-445a-8593-3de2b6d8b14d" />
+  <nestedChildShapes>
+    <startShape Id="2a0dea06-f42a-4aaa-8699-fbf3d3d93d43" isExpanded="true" absoluteBounds="5, 0.5, 0.25, 0.25">
+      <startMoniker Id="53b5f960-9977-41f0-8e4f-a1091ad1a14c" />
+    </startShape>
+    <userInputShape Id="ff81bf75-e76d-4067-bba5-c1b42941f13c" isExpanded="true" absoluteBounds="4.5, 1.125, 1.25, 0.5">
+      <userInputMoniker Id="e9c61743-1b3f-400b-8fab-3c95770802bb" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="c6dfdf8b-c581-4993-a885-4a8f12b5bb84" isExpanded="true" absoluteBounds="4.65625, 1.585, 0.08, 0.08">
+          <errorHandlerMoniker Id="30ce640a-31b9-4ce4-a96a-a7fc96be683a" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </userInputShape>
+    <dataFetchShape Id="a47447d6-19ea-4dbe-bd5e-40bea43b3f74" isExpanded="true" absoluteBounds="4.5, 2, 1.25, 0.5">
+      <fetchMoniker Id="eab693b0-9404-471c-85e2-2e7af91490a2" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="3290771c-86c2-425e-9aa7-0c3c3b1b896b" isExpanded="true" absoluteBounds="4.65625, 2.46, 0.08, 0.08">
+          <errorHandlerMoniker Id="ac4727cc-caed-47be-805a-1ed3a4ae2e0a" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </dataFetchShape>
+    <transferShape Id="ed229357-1803-4c8b-8f76-971c539e709b" isExpanded="true" absoluteBounds="4.5, 3.75, 1.25, 0.5">
+      <transferMoniker Id="3176d569-f926-4996-83ee-940e195f2a48" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="2eac5bcc-884a-4861-aec7-4fc93e565a7f" isExpanded="true" absoluteBounds="4.65625, 4.21, 0.08, 0.08">
+          <errorHandlerMoniker Id="6a7244c5-a2bf-426d-8c24-cf3698cd3a4f" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </transferShape>
+    <multiPathTransitionConnector edgePoints="[(5.13541666666667 : 1.625); (5.13541666666667 : 2)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="caadb81d-5cfc-42bd-9c35-345bd1c658c5" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <userInputShapeMoniker Id="ff81bf75-e76d-4067-bba5-c1b42941f13c" />
+        <dataFetchShapeMoniker Id="a47447d6-19ea-4dbe-bd5e-40bea43b3f74" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <transitionConnector edgePoints="[(5.125 : 0.75); (5.125 : 1.125)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <startShapeMoniker Id="2a0dea06-f42a-4aaa-8699-fbf3d3d93d43" />
+        <userInputShapeMoniker Id="ff81bf75-e76d-4067-bba5-c1b42941f13c" />
+      </nodes>
+    </transitionConnector>
+    <transitionConnector edgePoints="[(5.75 : 4); (6.125 : 4); (6.125 : 1.35416666666667); (5.75 : 1.35416666666667)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <transferShapeMoniker Id="ed229357-1803-4c8b-8f76-971c539e709b" />
+        <userInputShapeMoniker Id="ff81bf75-e76d-4067-bba5-c1b42941f13c" />
+      </nodes>
+    </transitionConnector>
+    <userInputShape Id="bbf65ce7-d253-466b-8fa7-0a41a29d7bf3" isExpanded="true" absoluteBounds="4.5, 2.875, 1.25, 0.5">
+      <userInputMoniker Id="bd4ae621-71cc-456d-a528-f3188b0e5051" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="db340dd3-905d-4a97-aa7e-206f9dd9989e" isExpanded="true" absoluteBounds="4.65625, 3.335, 0.08, 0.08">
+          <errorHandlerMoniker Id="715d2ec7-17bd-410a-a3a2-cc493141e4e2" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </userInputShape>
+    <multiPathTransitionConnector edgePoints="[(5.14583333333333 : 2.5); (5.14583333333333 : 2.875)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="0b80429a-53be-4dda-9350-ac50c981c747" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <dataFetchShapeMoniker Id="a47447d6-19ea-4dbe-bd5e-40bea43b3f74" />
+        <userInputShapeMoniker Id="bbf65ce7-d253-466b-8fa7-0a41a29d7bf3" />
+      </nodes>
+    </multiPathTransitionConnector>
+    <transitionConnector edgePoints="[(4.69625 : 3.415); (4.69625 : 3.75)]" manuallyRouted="false" fixedFrom="Caller" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <errorHandlerShapeMoniker Id="db340dd3-905d-4a97-aa7e-206f9dd9989e" />
+        <transferShapeMoniker Id="ed229357-1803-4c8b-8f76-971c539e709b" />
+      </nodes>
+    </transitionConnector>
+    <multiPathTransitionConnector edgePoints="[(4.5 : 3.125); (4.125 : 3.125); (4.125 : 1.375); (4.5 : 1.375)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="caadb81d-5cfc-42bd-9c35-345bd1c658c5" labelPosition="SourceTop">
+      <relativeChildShapes />
+      <nodes>
+        <userInputShapeMoniker Id="bbf65ce7-d253-466b-8fa7-0a41a29d7bf3" />
+        <userInputShapeMoniker Id="ff81bf75-e76d-4067-bba5-c1b42941f13c" />
+      </nodes>
+    </multiPathTransitionConnector>
+  </nestedChildShapes>
+</tmlLanguageDiagram>

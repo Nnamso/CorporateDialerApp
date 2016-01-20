@@ -1,0 +1,2 @@
+Please say the first name or full name of the person you would like to call.
+If you would like to call someone else please say their first name or their full name.

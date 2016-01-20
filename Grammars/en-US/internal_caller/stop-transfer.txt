@@ -1,0 +1,3 @@
+stop	stop
+cancel	stop
+abort	stop

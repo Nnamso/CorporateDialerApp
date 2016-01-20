@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<voiceApplicationModel dslVersion="1.0.0.0" Id="df3e99e6-8600-44dd-a555-b36188200643" xmlns="https://studio.tellme.com/schemas/tml">
+  <states>
+    <start Id="49d98db8-853a-46a6-ad25-43bd2a371d5f" name="Start1">
+      <target>
+        <transition createCodeStub="false">
+          <presentationMoniker Id="28054cbd-d1cd-49cf-903f-b09a3918c580" />
+        </transition>
+      </target>
+    </start>
+    <fetch Id="4b10ad61-759b-4945-8134-39794a6bfb0b" name="Lookup ANI" method="get" uRL="js:appsLookupUserAPI" encodingType="urlencoded" nameList="ani=extractANI(session.telephone.ani)" gobackPassThru="false">
+      <targets>
+        <dataTransition createCodeStub="false" condition="Caller info record returned" default="false">
+          <moduleMoniker Id="cbe06235-ae30-4f30-a5d8-1c973389352e" />
+        </dataTransition>
+        <dataTransition createCodeStub="false" default="true">
+          <moduleMoniker Id="3fb550d9-7a15-4efb-8100-760916647bc0" />
+        </dataTransition>
+      </targets>
+      <errorHandler>
+        <errorHandler Id="12638cef-08df-4e79-8f8f-6d11e3099cde" name="Transfer to front desk" />
+      </errorHandler>
+    </fetch>
+    <module Id="cbe06235-ae30-4f30-a5d8-1c973389352e" name="Internal Caller" />
+    <module Id="3fb550d9-7a15-4efb-8100-760916647bc0" name="External Caller" />
+    <presentation Id="28054cbd-d1cd-49cf-903f-b09a3918c580" name="Greeting">
+      <target>
+        <transition createCodeStub="false">
+          <fetchMoniker Id="4b10ad61-759b-4945-8134-39794a6bfb0b" />
+        </transition>
+      </target>
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="[Good morning] Tellme Networks" xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;[Good morning] Tellme Networks&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kVariable&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;[Good morning]&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;good morning&lt;/TTS&gt;&#xD;&#xA;      &lt;BulkAudioFilename&gt;good morning.txt&lt;/BulkAudioFilename&gt;&#xD;&#xA;      &lt;Name&gt;f9ba306061f9b19acb43fc02f74bc52b&lt;/Name&gt;&#xD;&#xA;      &lt;Library&gt;Custom&lt;/Library&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;f9ba306061f9b19acb43fc02f74bc52b.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;1&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;Tellme Networks&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;tellme networks&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;40721bc66ba9807a028a163e88095f38&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;40721bc66ba9807a028a163e88095f38.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="0" mark="false" />
+          </audio>
+        </audioPresentation>
+      </presentationBases>
+    </presentation>
+  </states>
+</voiceApplicationModel>

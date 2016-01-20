@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<voiceApplicationModel dslVersion="1.0.0.0" Id="d7f49df6-6400-4f20-ad6c-0b8277484749" xmlns="https://studio.tellme.com/schemas/tml">
+  <states>
+    <start Id="33ace892-8982-4646-aacf-7957445265b6" name="Start1">
+      <target>
+        <transition createCodeStub="false">
+          <decisionMoniker Id="3dfc243b-d03b-4c13-b5f6-10d297fbb177" />
+        </transition>
+      </target>
+    </start>
+    <exit Id="d4253459-9b6c-48c9-b744-c4f73e8051d8" name="Exit1" type="Return" />
+    <exit Id="cf5a3b6a-1868-4faf-a4ea-39772da60380" name="Exit2" type="Reprompt" />
+    <decision Id="3dfc243b-d03b-4c13-b5f6-10d297fbb177" name="Used DTMF" type="UsedDTMF" count="3" global="false" confidenceThreshold="0.60">
+      <targets>
+        <dataTransition createCodeStub="false" default="false" name="Yes">
+          <exitMoniker Id="d4253459-9b6c-48c9-b744-c4f73e8051d8" />
+        </dataTransition>
+        <dataTransition createCodeStub="false" default="true">
+          <decisionMoniker Id="8312d80d-697d-4fe5-a6d6-44e992533349" />
+        </dataTransition>
+      </targets>
+    </decision>
+    <decision Id="8312d80d-697d-4fe5-a6d6-44e992533349" name="High Confidence" type="HighConfidence" count="3" global="false" confidenceThreshold="0.60">
+      <targets>
+        <dataTransition createCodeStub="false" default="false" name="Yes">
+          <exitMoniker Id="d4253459-9b6c-48c9-b744-c4f73e8051d8" />
+        </dataTransition>
+        <dataTransition createCodeStub="false" default="true">
+          <userInputMoniker Id="8c0a8754-2227-4fc2-afd1-1946b3fb0787" />
+        </dataTransition>
+      </targets>
+    </decision>
+    <userInput Id="8c0a8754-2227-4fc2-afd1-1946b3fb0787" name="I heard you say" type="Menu" gobackStopsHere="False">
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="I heard you say [John or John Smith] is that correct?" xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I heard you say [John or John Smith] is that correct?&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I heard you say&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i heard you say&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;ea567bf1cea1ccc15491c0f9aacbc5e8&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;ea567bf1cea1ccc15491c0f9aacbc5e8.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kVariable&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;1&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;[John or John Smith]&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;john or john smith&lt;/TTS&gt;&#xD;&#xA;      &lt;BulkAudioFilename&gt;john or john smith.txt&lt;/BulkAudioFilename&gt;&#xD;&#xA;      &lt;Name&gt;ec34238fd27fcb224a0d5b1dd37f634d&lt;/Name&gt;&#xD;&#xA;      &lt;Library&gt;Custom&lt;/Library&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;ec34238fd27fcb224a0d5b1dd37f634d.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;2&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;is that correct?&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;is that correct!&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;de971df4e3ed4bacd4354e6733391dfd&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;de971df4e3ed4bacd4354e6733391dfd.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="1" mark="false" />
+            <audio content="You can say yes or no." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;You can say yes or no.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;You can say yes or no.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;you can say yes or no.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;123389a92d9569d3bfb07bedae2920ca&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;123389a92d9569d3bfb07bedae2920ca.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoInput" count="1" mark="false" />
+            <audio content="I sorry I didn't hear that." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I sorry I didn't hear that.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I sorry I didn't hear that.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i sorry i didn't hear that.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;cc01c9e2833e195a3b493c0895f67853&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;cc01c9e2833e195a3b493c0895f67853.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoInput" count="2" mark="false" />
+            <audio content="I am sorry I didn't get that, you can say yes or no." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I am sorry I didn't get that, you can say yes or no.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I am sorry I didn't get that, you can say yes or no.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i am sorry i didn't get that, you can say yes or no.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;e83a5d0c5a772a769a5657b62fce7eec&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;e83a5d0c5a772a769a5657b62fce7eec.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoMatch" count="1" mark="false" />
+            <audio content="I am sorry I didn't get that." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;I am sorry I didn't get that.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;I am sorry I didn't get that.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;i am sorry i didn't get that.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;0bd05215725d08bf695833a67815af1d&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;0bd05215725d08bf695833a67815af1d.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="NoMatch" count="2" mark="false" />
+          </audio>
+          <grammars>
+            <grammar type="Custom" input="yes_no.grxml" mode="Voice" />
+          </grammars>
+        </audioPresentation>
+      </presentationBases>
+      <targets>
+        <recoTransition createCodeStub="false" grammarResult="yes" name="Yes">
+          <exitMoniker Id="d4253459-9b6c-48c9-b744-c4f73e8051d8" />
+        </recoTransition>
+        <recoTransition createCodeStub="false" grammarResult="no" name="No">
+          <decisionMoniker Id="6898f752-c6cb-4f1d-99f6-bd735eb71b26" />
+        </recoTransition>
+      </targets>
+      <errorHandler>
+        <errorHandler Id="85ae5e3b-9c99-41c3-98a9-8dbc883bab3e" name="Transfer to front desk" />
+      </errorHandler>
+    </userInput>
+    <decision Id="6898f752-c6cb-4f1d-99f6-bd735eb71b26" name="Third time" type="xTimesThru" count="3" global="false" confidenceThreshold="0.60">
+      <targets>
+        <dataTransition createCodeStub="false" default="false" name="Yes">
+          <transferMoniker Id="3a27a2db-e58a-4929-8541-94bb73e5dea1" />
+        </dataTransition>
+        <dataTransition createCodeStub="false" default="true">
+          <presentationMoniker Id="d538eca6-c358-4952-8010-2844ad642e44" />
+        </dataTransition>
+      </targets>
+    </decision>
+    <transfer Id="3a27a2db-e58a-4929-8541-94bb73e5dea1" name="Transfer1" destination="tel:+16505550100" type="Blind" dTMFTermination="**" voiceTermination="">
+      <errorHandler>
+        <errorHandler Id="8ab5fa53-7585-4e2b-977b-ed842fa5167b" name="Default Error Handler" />
+      </errorHandler>
+    </transfer>
+    <presentation Id="d538eca6-c358-4952-8010-2844ad642e44" name="My mistake">
+      <target>
+        <transition createCodeStub="false">
+          <exitMoniker Id="cf5a3b6a-1868-4faf-a4ea-39772da60380" />
+        </transition>
+      </target>
+      <presentationBases>
+        <audioPresentation language="en-US" modality="Audio" type="Sequential">
+          <audio>
+            <audio content="Sorry, my mistake." xML="&lt;?xml version=&quot;1.0&quot;?&gt;&#xD;&#xA;&lt;AudioContents xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot;&gt;&#xD;&#xA;  &lt;Content&gt;Sorry, my mistake.&lt;/Content&gt;&#xD;&#xA;  &lt;AudioSegments&gt;&#xD;&#xA;    &lt;AudioSegment&gt;&#xD;&#xA;      &lt;Type&gt;kStatic&lt;/Type&gt;&#xD;&#xA;      &lt;Position&gt;0&lt;/Position&gt;&#xD;&#xA;      &lt;Content&gt;Sorry, my mistake.&lt;/Content&gt;&#xD;&#xA;      &lt;TTS&gt;sorry, my mistake.&lt;/TTS&gt;&#xD;&#xA;      &lt;Name&gt;baa22421f14494b6dbcf324dfd37e9a1&lt;/Name&gt;&#xD;&#xA;      &lt;Break&gt;150&lt;/Break&gt;&#xD;&#xA;      &lt;Nested&gt;0&lt;/Nested&gt;&#xD;&#xA;      &lt;Recorded&gt;false&lt;/Recorded&gt;&#xD;&#xA;      &lt;URL&gt;baa22421f14494b6dbcf324dfd37e9a1.wav&lt;/URL&gt;&#xD;&#xA;    &lt;/AudioSegment&gt;&#xD;&#xA;  &lt;/AudioSegments&gt;&#xD;&#xA;&lt;/AudioContents&gt;" handler="Prompt" count="0" mark="false" />
+          </audio>
+        </audioPresentation>
+      </presentationBases>
+    </presentation>
+  </states>
+</voiceApplicationModel>

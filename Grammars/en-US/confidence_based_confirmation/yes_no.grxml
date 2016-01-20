@@ -1,0 +1,23 @@
+<?xml version= "1.0"?>
+<grammar mode="voice"
+         root="main"
+         tag-format="semantics/1.0"
+         version="1.0"
+         xml:lang="en-US"
+         xmlns="http://www.w3.org/2001/06/grammar">
+
+<rule id="main" scope="public">
+  <one-of>
+    <!-- basic "yes" response -->
+    <item weight="0.5">
+      yes
+      <tag>out = "yes";</tag>
+    </item>
+    <!-- basic "no" response -->
+    <item weight="0.5">
+      no
+      <tag>out = "no";</tag>
+    </item>
+  </one-of>
+</rule>
+</grammar>

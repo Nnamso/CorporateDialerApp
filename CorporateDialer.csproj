@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DF013ADB-262A-4F83-8530-A6F736AF4006}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CorporateDialer</RootNamespace>
+    <AssemblyName>CorporateDialer</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="app-root.vxml.en-US" />
+    <None Include="Grammars\en-US\confidence_based_confirmation\yes_no.grxml" />
+    <None Include="Modules\confidence_based_confirmation.tml" />
+    <None Include="Modules\confidence_based_confirmation.tml.diagram">
+      <DependentUpon>confidence_based_confirmation.tml</DependentUpon>
+    </None>
+    <None Include="Modules\default_error_handler.tml" />
+    <None Include="Modules\external_caller.tml" />
+    <None Include="Modules\index.tml" />
+    <None Include="Modules\index.tml.diagram">
+      <DependentUpon>index.tml</DependentUpon>
+    </None>
+    <None Include="Modules\internal_caller.tml" />
+    <None Include="Modules\transfer_to_front_desk.tml" />
+    <None Include="Templates\audiojs\main.tmltt" />
+    <None Include="Templates\documentation\main.tmltt" />
+    <None Include="Templates\grxml\main.tmltt" />
+    <None Include="Templates\js\main.tmltt" />
+    <None Include="Templates\recordme\main.tmltt" />
+    <None Include="Templates\vxml\main.tmltt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="app-config.xml" />
+    <Content Include="BulkAudio\en-US\good morning.txt" />
+    <Content Include="BulkAudio\en-US\has a work, mobile, and home listing.txt" />
+    <Content Include="BulkAudio\en-US\john smith.txt" />
+    <Content Include="BulkAudio\en-US\on the mobile phone.txt" />
+    <Content Include="BulkAudio\en-US\transfer instruction and delay.txt" />
+    <Content Include="BulkAudio\en-US\who would you like to speak with.txt" />
+    <Content Include="Grammars\en-US\internal_caller\stop-transfer.txt" />
+    <Content Include="JavaScript\app-apis.js" />
+    <Content Include="JavaScript\audio-en-US.js" />
+    <Content Include="JavaScript\index.js" />
+    <Content Include="JavaScript\internal_caller.js" />
+    <Content Include="Grammars\en-US\internal_caller\select_phone-voice.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{B4F97281-0DBD-4835-9ED8-7DFB966E87FF}" />
+  </ItemGroup>
+</Project>

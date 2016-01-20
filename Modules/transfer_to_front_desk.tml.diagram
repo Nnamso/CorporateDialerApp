@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<tmlLanguageDiagram dslVersion="1.0.0.0" isExpanded="true" absoluteBounds="0, 0, 11, 8.5" isCompleteView="true" name="transfer_to_front_desk">
+  <voiceApplicationModelMoniker Id="c5aac1ba-d439-46df-ba34-881cd9444db5" />
+  <nestedChildShapes>
+    <startShape Id="bcd3bd73-899a-4be4-ba6f-c44f514ac726" isExpanded="true" absoluteBounds="4.75, 0.75, 0.25, 0.25">
+      <startMoniker Id="7cf70f6d-8b96-4dc0-8d70-c40729e4f587" />
+    </startShape>
+    <presentationShape Id="f8af49c0-09f6-4f0b-85af-76b5c21b8fbd" isExpanded="true" absoluteBounds="4.25, 1.5, 1.25, 0.5">
+      <presentationMoniker Id="7a1cc7d7-7cda-46fa-92ec-c519155aeeea" />
+    </presentationShape>
+    <transferShape Id="02624a0e-92ca-4a39-9931-31584fb240e6" isExpanded="true" absoluteBounds="4.25, 2.5, 1.25, 0.5">
+      <transferMoniker Id="0563e037-8a1f-41c3-9581-bc07d7ba9bac" />
+      <relativeChildShapes>
+        <errorHandlerShape Id="b8ed0791-b7e1-4735-8817-b5038c70b1d9" isExpanded="true" absoluteBounds="4.40625, 2.96, 0.08, 0.08">
+          <errorHandlerMoniker Id="9f070b39-9e6d-4de2-956b-555ff98bf08a" />
+        </errorHandlerShape>
+      </relativeChildShapes>
+    </transferShape>
+    <transitionConnector edgePoints="[(4.875 : 1); (4.875 : 1.5)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <startShapeMoniker Id="bcd3bd73-899a-4be4-ba6f-c44f514ac726" />
+        <presentationShapeMoniker Id="f8af49c0-09f6-4f0b-85af-76b5c21b8fbd" />
+      </nodes>
+    </transitionConnector>
+    <transitionConnector edgePoints="[(4.875 : 2); (4.875 : 2.5)]" manuallyRouted="false" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="981d9ac2-7a9a-4aa8-aa8f-f111418bba4e">
+      <nodes>
+        <presentationShapeMoniker Id="f8af49c0-09f6-4f0b-85af-76b5c21b8fbd" />
+        <transferShapeMoniker Id="02624a0e-92ca-4a39-9931-31584fb240e6" />
+      </nodes>
+    </transitionConnector>
+  </nestedChildShapes>
+</tmlLanguageDiagram>
